@@ -35,7 +35,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.example.medicalstoreuser.R
+import com.example.pillport.R
 import com.pillport.app.ui_layer.Common.MultiColorText
 import com.pillport.app.ui_layer.Navigation.ScreenRoutes
 import com.pillport.app.ui_layer.ViewModel.AppViewModel

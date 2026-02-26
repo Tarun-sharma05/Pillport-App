@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MedicalStore_Admin"
+rootProject.name = "Pillport Admin"
 include(":app")
  

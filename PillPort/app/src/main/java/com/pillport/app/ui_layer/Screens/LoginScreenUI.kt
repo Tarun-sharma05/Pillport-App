@@ -31,7 +31,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.example.medicalstoreuser.R
+//import com.example.medicalstoreuser.R
+import com.example.pillport.R
 import com.pillport.app.Data.User_Pref.UserPreferenceManager
 import com.pillport.app.ui_layer.Common.MultiColorText
 import com.pillport.app.ui_layer.Navigation.ScreenRoutes

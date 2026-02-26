@@ -1,4 +1,8 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="50dp" android:viewportHeight="360" android:viewportWidth="360" android:width="50dp">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="50dp"
+    android:viewportHeight="360"
+    android:viewportWidth="360"
+    android:width="50dp">
       <group
           android:name="animationGroup">
     <path android:fillColor="#FEFEFE" android:pathData="M0,0C118.8,0 237.6,0 360,0C360,118.8 360,237.6 360,360C241.2,360 122.4,360 0,360C0,241.2 0,122.4 0,0Z"/>

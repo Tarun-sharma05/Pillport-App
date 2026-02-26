@@ -2,25 +2,22 @@ import org.gradle.kotlin.dsl.implementation
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    kotlin("plugin.serialization") version "2.1.20"
-//    alias(libs.plugins.hilt.plugin)
-//    kotlin("kapt")
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
-
+//    id("com.google.gms.google-services")
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 android {
-    namespace = "com.example.medicalstoreuser"
-    compileSdk = 35
+    namespace = "com.example.pillport"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.medicalstoreuser"
+        applicationId = "com.example.pillport"
         minSdk = 27
+        targetSdk = 36
 //        targetSdk(rootProject.extra["defaultTargetSdkVersion"] as Int)
-        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -37,17 +34,15 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         compose = true
     }
-    buildToolsVersion = rootProject.extra["buildToolsVersion"] as String
+    buildToolsVersion = "36.0.0"
 }
+
 
 dependencies {
 
@@ -69,8 +64,12 @@ dependencies {
     implementation(libs.androidx.navigation.common)
     implementation(libs.kotlinx.serialization.json)
 
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    ksp("com.google.dagger:hilt-android-compiler:2.51.1")
+    implementation("com.google.dagger:hilt-android:2.59.2")
+    ksp("com.google.dagger:hilt-android-compiler:2.59.2")
+
+//    // Koin
+//    implementation(libs.koin.android)
+//    implementation(libs.koin.androidx.compose)
 
 
     implementation (libs.retrofit)
@@ -80,22 +79,22 @@ dependencies {
     implementation (libs.androidx.datastore.preferences)
     implementation(libs.androidx.material.icons.extended)
 
-    implementation("io.coil-kt.coil3:coil-compose:3.0.4")
-    implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.4")
+    implementation("io.coil-kt.coil3:coil-compose:3.3.0")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.2.0")
 
-    implementation("androidx.core:core-splashscreen:1.0.1")
-    implementation("androidx.compose.material3:material3:1.3.1")
+    implementation("androidx.core:core-splashscreen:1.2.0")
+    implementation("androidx.compose.material3:material3:1.4.0")
 
     // Android Maps Compose composables for the Maps SDK for Android
     implementation ("com.google.android.gms:play-services-location:21.3.0")
-    implementation ("com.google.android.gms:play-services-maps:19.1.0")
+    implementation ("com.google.android.gms:play-services-maps:20.0.0")
 
-    implementation("com.google.maps.android:maps-compose:6.5.2")
+    implementation("com.google.maps.android:maps-compose:8.1.0")
 
-    implementation("com.google.android.libraries.places:places:4.2.0")
+    implementation("com.google.android.libraries.places:places:5.1.1")
 
-    implementation ("com.google.android.material:material:1.2.0")
+    implementation ("com.google.android.material:material:1.12.0")
 
-    implementation ("com.google.accompanist:accompanist-permissions:0.29.0-alpha")
+    implementation ("com.google.accompanist:accompanist-permissions:0.37.3")
 
 }
